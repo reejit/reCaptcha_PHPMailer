@@ -1,0 +1,224 @@
+/* Base CSS */
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+
+}
+a:hover { text-decoration: none }
+
+.menu-background {
+    background-color: #ffc0b3;
+}
+/* Header Nav Menu */
+
+  nav.main-nav {
+    margin:120px 0px 0px 0px;
+  }
+.p-menu {
+  padding: 10px 0px;
+}
+.p-menu nav {
+  z-index: 9999;
+}
+.p-menu nav ul {
+    display: flex;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.p-menu nav ul li {
+    list-style: none;
+    position: relative;
+}
+.p-menu nav ul li a {
+    padding: 22px 20px;
+    line-height: 20px;
+    color: #000;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+}
+.p-menu nav ul li:before {
+    font-family: fontAwesome;
+    position: absolute;
+    content: "\f0d7";
+    line-height: 40px;
+    color: #000;
+    top:13px;
+    right: 2px;
+}
+.p-menu nav ul li:hover:before {
+    content: "\f0d8";
+}
+.p-menu nav ul > li > ul, .p-menu nav ul > li > ul > li > ul {
+    position: absolute;
+    left: 0;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #f1f1f1;
+    z-index: 9;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.p-menu nav ul > li:hover > ul, .p-menu nav ul > li > ul > li:hover > ul {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+}
+.p-menu nav ul li ul li, .p-menu nav ul li ul li a {
+    display: block;
+    width: 260px;
+}
+.p-menu nav ul li a:hover, .p-menu nav ul li a.active {
+    color: #FC653E;
+}
+.menu-toggle {
+    color: #fff;
+    float: right;
+    padding: 10px 20px;
+    font-size: 17px;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+.p-menu nav ul > li > ul > li > ul, .p-menu nav ul > li > ul > li > ul > li > ul {
+    left:20px;
+    top: 102%;
+    z-index: 99999;
+}
+/*.p-menu nav ul > li > ul > li > ul > li > ul {
+    left: -260px;
+    top: 75%;
+}*/
+
+/* Header Nav Menu Mobile */
+@media only screen and (max-width: 991px) {
+    .menu-background {
+    height: 64px;
+    }
+
+     .menu-toggle {
+      display: block;
+     }
+
+     .p-menu nav {
+      background-color: #fdfdfd;
+      width: 80%;
+      height: 100%;
+      right:100%; 
+      top:64px;
+      position:fixed;
+      overflow:scroll;
+      }
+     .p-menu nav.active{
+      width: 172%;
+      left: -72%;
+      margin-top: 12px;
+     }
+     .p-menu nav ul {
+      display: block;
+      text-align: left;
+     }
+     .p-menu nav ul li a {
+        display: block;
+        padding: 10px 20px;
+     }
+     .p-menu nav ul > li > ul, .p-menu nav ul > li > ul > li > ul {
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      visibility: hidden;
+      -webkit-transition: .5s;
+      transition: .5s;
+    display: none;
+  }
+   .p-menu nav ul > li:hover ul, .p-menu nav ul > li > ul > li:hover > ul {
+      opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+      background-color: #f9f9f9;
+      display: block;
+  }
+   .p-menu nav ul li:before {
+        top:0px;
+    }
+     .p-menu nav ul li:hover ul, .p-menu nav ul li > ul li:hover > ul {
+      position: relative;
+     }
+     .p-menu nav ul li ul li {
+      width: 100%;
+     }
+     .p-menu nav ul li ul li a {
+      width: 90%;
+      border-bottom: 1px solid rgba(0,0,0, 0.3);
+     }
+
+    .p-menu nav ul li:before {
+      width: 10%;
+      right: 0px;
+      padding-left: 10px;
+    }
+    .p-menu nav ul li:hover > ul li:before {
+      border-bottom: 1px solid rgba(0,0,0, 0.3);
+    }
+
+    .p-menu nav ul > li > ul > li > ul {
+        left:0;
+        top: 0;
+    }
+    .p-menu nav ul > li > ul > li > ul > li > ul {
+        left: 0;
+    }
+
+}
+
+section.section-padding {
+    padding: 100px 0;
+}
+
+a.btnf {
+    letter-spacing: 3px;
+}
+.preheading {
+    font-family: 'Mr Bedfort', cursive;
+    position: relative;
+}
+.subheading {
+    color: #c1c0c7;
+    font-weight: 400;
+}
+.mheading {
+    color: #1d1f21;
+}
+.clro {
+    color: #f1a660;
+    top: 32px;
+    font-size: 40px;
+}
