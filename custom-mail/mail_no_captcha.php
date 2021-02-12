@@ -1,13 +1,13 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP; // For SMTP must enable
+use PHPMailer\PHPMailer\SMTP; // For SMTP must enable
 use PHPMailer\PHPMailer\Exception;
 
 // Load Now
 require 'Exception.php';
 require 'PHPMailer.php';
-// require 'SMTP.php'; //For SMTP must enable
+require 'SMTP.php'; //For SMTP must enable
 
     function died($error) {
         // your error code can go here
