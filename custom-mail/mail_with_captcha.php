@@ -74,7 +74,7 @@ if(!empty($_POST['txtEmail'])) { //set a required field here for condition
     // Validate reCAPTCHA box 
         if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){ 
             // Google reCAPTCHA API secret key 
-            $secretKey = 'YOUR_RECAPTCHA_SECRET_KEY_GOES_HERE'; 
+            $secretKey = '6Ldb-VQaAAAAAMzsx73YBy6IGZxnvMnxpPE5mUQs'; 
 
             if(isset($_POST['g-recaptcha-response'])){
               $captcha=$_POST['g-recaptcha-response'];
