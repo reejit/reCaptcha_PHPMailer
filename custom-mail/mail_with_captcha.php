@@ -45,21 +45,21 @@ if(!empty($_POST['txtEmail'])) { //set a required field here for condition
     // Instantiation and passing `true` enables exceptions
     $mail = new PHPMailer(true);
     $mail->isSendmail();                                            // for phpsendMail
-    // $mail->isSMTP();                                            // Send using SMTP
+    $mail->isSMTP();                                            // Send using SMTP
 
 
     //Server settings for SMTP
 
-    // $mail->Host       = 'mail.your-mailserver.com';             // Set the SMTP server to send through
-    // $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    // $mail->Username   = 'user@your-domain.com';                 // SMTP username
-    // $mail->Password   = 'password';                               // SMTP password
+    $mail->Host       = 'smtp.gmail.com';             // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'reejitx@gmail.com';                 // SMTP username
+    // $mail->Password   = 'reejitxx1234+';                               // SMTP password
     // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     // $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
 
-    $mail->setFrom('noreplay@yourmail.com', 'optional name');     // From mail
-    $mail->addAddress('mail@yourmail.com', 'optional name');     // Add a recipient mail
+    $mail->setFrom('reejitx@gmail.com', 'optional name');     // From mail
+    $mail->addAddress('guardiansofspartax@gmail.com', 'optional name');     // Add a recipient mail
     // $mail->addAddress('ellen@example.com');                     // Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
